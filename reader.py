@@ -15,7 +15,9 @@ while go == 1:
              GPIO.setup(21,GPIO.OUT)
              GPIO.output(21, GPIO.HIGH)
              #time.sleep(2)
-             #GPIO.cleanup()
+             GPIO.cleanup(26)
+             GPIO.cleanup(19)
+             GPIO.cleanup(13)
              
          else:
              print('not 1')
@@ -25,7 +27,9 @@ while go == 1:
                  GPIO.setup(26,GPIO.OUT)
                  GPIO.output(26, GPIO.HIGH)
                  #time.sleep(2)
-                 #GPIO.cleanup()
+                 GPIO.cleanup(21)
+                 GPIO.cleanup(13)
+                 GPIO.cleanup(19)
              else:
                 if (content == 3):
                      GPIO.setmode(GPIO.BCM)
@@ -33,7 +37,9 @@ while go == 1:
                      GPIO.setup(19,GPIO.OUT)
                      GPIO.output(19, GPIO.HIGH)
                      #time.sleep(2)
-                     #GPIO.cleanup()
+                     GPIO.cleanup(21)
+                     GPIO.cleanup(26)
+                     GPIO.cleanup(13)
                 else:
                     if (content == 4):
                          GPIO.setmode(GPIO.BCM)
@@ -41,9 +47,9 @@ while go == 1:
                          GPIO.setup(13,GPIO.OUT)
                          GPIO.output(13, GPIO.HIGH)
                          #time.sleep(2)
-                         #GPIO.cleanup()
-                    else:
-                        GPIO.cleanup()
-                        time.sleep(114514)
+                         GPIO.cleanup(21)
+                         GPIO.cleanup(26)
+                         GPIO.cleanup(19)
+                    
                  
      
